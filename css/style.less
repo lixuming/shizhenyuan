@@ -343,21 +343,47 @@ footer{
 .about{
   position: relative;
 
-  .crumbs{
-    position: absolute;
-    left:0;
-    top:0;
-    padding: 1em 0;
-    border: 1px solid #fc0;
-    width:100%;
-    
-    .container{
-      border-bottom: 1px solid #e6e6e6;
-      padding-bottom: 2em;
+  .nav_{
+    position: relative;
+    height:2em;
+
+    p{
+      position: absolute;
+      left:0;
+      top:0;
     }
-  }  // end of crumbs
+  }
 
+  .part_01{
+    color:#b59758;
+    
+    ul{
+      display: block;
+      margin-top: 60px;
+      
+      .list{
+        margin-bottom: 70px;
+        
+        h3{
+          padding-bottom: 20px;
+          margin-bottom: 0;
+          letter-spacing: 5px;
 
+          span{
+            display: inline-block;
+            padding-bottom: 30px;
+            padding-right: 20px;
+            border-bottom: 1px solid #b59758;
+          }
+        }
+
+        p{
+          letter-spacing: 1px;
+          line-height: 2em;
+        }
+      }
+    }
+  }
 
 
 }  // end of about
