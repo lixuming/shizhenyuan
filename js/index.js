@@ -18,7 +18,7 @@ $(window).scroll(function(){
 	}else{
 		$('#scrollToTop').css('display','none');
 	}
-	console.log(wdHeight);
+	//console.log(wdHeight);
 });
 
 
@@ -28,11 +28,22 @@ $("#scrollToTop").click(function () {
 	return false;
 });
 
-var _about =  $('.index').find('.about'),
+var _about =  $('.index').find('.about_'),
 	_movie = _about.find('video');
 
 $('#btn').click(function(){
-	console.log(111);
 	$(this).css('display','none');
 	_movie.get(0).play();
+});
+
+var __about = $('.about'),
+	_about_btn = __about.find('.nav_').find('.choose_btn');
+_about_btn.click(function(){
+	$(this).addClass('strong').siblings().removeClass('strong');
+	var a = $(this).index();
+	//console.log(a);
+	var b = __about.find('.part_'+a);
+	//console.log(b);
+	b.fadeIn(600).siblings('.part').fadeOut(300);
+
 });
