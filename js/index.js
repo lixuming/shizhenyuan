@@ -42,13 +42,15 @@ var __qiehuan = $('.qiehuan'),
 
 _qiehuan_btn.click(function(){
 
-	if($(this).data())
+	//if($(this).data())
 	var a = $(this).index();
 	var b = __qiehuan.find('.part_'+a);
 	var color = $(this).data('color');
 	$(this).addClass('strong').siblings().removeClass('strong');
 	if(color === 'fff'){
 		$(this).addClass('font-white').siblings().removeClass('font-white');
+	}else if(color === 'fc0'){
+		$(this).addClass('font-yellow').siblings().removeClass('font-yellow');
 	}
 	b.fadeIn(600).siblings('.part').fadeOut(300);
 
