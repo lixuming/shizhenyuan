@@ -36,14 +36,20 @@ $('#btn').click(function(){
 	_movie.get(0).play();
 });
 
-var __about = $('.about'),
-	_about_btn = __about.find('.nav_').find('.choose_btn');
-_about_btn.click(function(){
-	$(this).addClass('strong').siblings().removeClass('strong');
+//页面切换插件
+var __qiehuan = $('.qiehuan'),
+	_qiehuan_btn = __qiehuan.find('.nav_').find('.choose_btn');
+
+_qiehuan_btn.click(function(){
+
+	if($(this).data())
 	var a = $(this).index();
-	//console.log(a);
-	var b = __about.find('.part_'+a);
-	//console.log(b);
+	var b = __qiehuan.find('.part_'+a);
+	var color = $(this).data('color');
+	$(this).addClass('strong').siblings().removeClass('strong');
+	if(color === 'fff'){
+		$(this).addClass('font-white').siblings().removeClass('font-white');
+	}
 	b.fadeIn(600).siblings('.part').fadeOut(300);
 
 });
